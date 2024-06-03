@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto_Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            position: relative;
+            height: 100vh;
+        }
+
+        .background-image {
+            background-image: url('chartpic.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            width: 100%;
+            filter: invert(0%); /* Initial state - original colors */
+            transition: filter 0.3s ease;
+        }
+
+        .highlight {
+            position: absolute;
+            width: 30%;
+            height: 30%;
+            border: 2px solid transparent;
+            opacity: 0.5;
+            transition: background-color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+        }
+
+        .highlight1 {
+            top: 25%;
+            left: 3%;
+            
+           
+        }
+
+        .highlight2 {
+            top: 20%;
+            left: 60%;
+            
+            
+        }
+
+        .input-container {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 18px;
+            color: #000;
+        }
+
+        .input-container input {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            color: #333;
+            background-color: #fff;
+            border: 1px solid #0a0909;
+            border-radius: 5px;
+        }
+
+        .highlight:hover {
+            border-color: #0c0c0c;
+            opacity: 1;
+            background-color: transparent;
+         
+            
+        }
+
+        .highlight:hover .input-container {
+            display: block;
+        
+        }
+
+        .container:hover .background-image {
+            filter: invert(100%); /* Inverted colors on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="background-image">
+        </div>
+
+        <div class="highlight highlight1">
+            <div class="input-container">
+                <input type="email" placeholder="Enter your email">
+            </div>
+        </div>
+
+        <div class="highlight highlight2">
+            <div class="input-container">
+                <input type="password" placeholder="Enter your password">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

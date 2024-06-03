@@ -1,0 +1,113 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  background:black;
+  overflow:hidden;
+  height:100vh;
+}
+.background-pic{
+    background-image: url("bridgeimg4.jpg");/* Replace "background.jpg" with your actual background image path */
+    height: 120vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background-color:black;
+    opacity:70%;
+    
+    
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+ 
+}
+
+.form-container .email-section{
+  position:relative;
+  left:30%;
+  top:100px;
+  font-size: 20px;
+  
+}
+.form-container .password-section{
+  position:relative;
+  left:550%;
+  top: 35px;
+  font-size: 20px;
+  
+}
+.form-container .forgot-section{
+  position:relative;
+  left:64%;
+  top:250px;
+  font-size: 20px;
+}
+.form-container .login-section{
+  position:relative;
+  left:580%;
+  padding:2px;
+  top:190px;
+  font-size: 20px;
+}
+
+
+.email-section,
+.password-section,
+.forgot-section,
+.login-section {
+  background: linear-gradient(rgba(15, 14, 14, 0.5), rgba(22, 21, 21, 0.2));
+  padding: 10px;
+  border-radius: 4px;
+  color:white;
+}
+
+button {
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5));
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+
+button:hover {
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+}
+i{
+  position:absolute;
+  height:30px;
+  background: linear-gradient(transparent,white);
+  border-bottom-left-radius:5px;
+  border-bottom-right-radius:5px;
+  animation:animate 5s linear infinite;
+}
+i:nth-child(3n+1),
+i:nth-child(3n+2),
+i:nth-child(3n+3) {
+    background: linear-gradient(transparent, grey);
+}
+
+@keyframes animate
+{
+  0%{
+     transform:translateY(-50vh);
+  }
+  100%{
+    transform:translateY(100vh);
+  }
+
+}

@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgba(0, 0, 0, 1);
+    overflow: hidden; /* Prevent scrolling */
+}
+
+img {
+    position: relative;
+}
+
+.overlay {
+    background-image: url("gandr-collage1.jpg");
+    height: 2075px;
+    width: 4800px;
+    background-position: fixed;
+    opacity: 15%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.bull {
+    background-image: url("bull3.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1200px;
+    height: 1200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 23px;
+    opacity: 95%;
+}
+
+   .link.eye1 { 
+    position:relative;
+    text-decoration: none;
+    color:#cc982f;
+    top:25%;
+    left:47%;
+    font-size:xx-small;}
+
+  .link.eye2 { 
+    position:relative;
+    text-decoration: none;
+    color: #cc982f; 
+    top:27%;
+    left:59%;
+    font-size:xx-small;}
+
+    .link.feet2 { 
+    position:relative;
+    text-decoration: none;
+    color: #cc982f; 
+    top:55%;
+    left:45%;
+    font-size:x-small;}
+    
+
+    .link.feet1 { 
+    position:relative;
+    text-decoration: none;
+    color: #cc982f; 
+    top:54%;
+    left:12%;
+    font-size:x-small;}
+ 
+    .link.horn1 { 
+        position:relative;
+        text-decoration: none;
+        color: #cc982f; 
+        left:33%;
+        top:16%;
+        font-size:x-small;
+        }
+
+    
+    .link.horn2 { 
+    position:relative;
+    text-decoration: none;
+    color: #cc982f; 
+    top:16%;
+    left:61%;
+    font-size:x-small;}
+   
+    .link.tail { 
+        position:relative;
+        text-decoration: none;
+        color: #696153; 
+        top:7%;
+        left:61%;
+        font-size:x-large;}  
+
+        
+        
+.block {
+    position: absolute;
+    width: 1220px;
+    height: 870px;
+    top: 20%; /* Adjust the distance from the bull image as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index:-1;
+    border-radius: 23px;
+    
+}
+
+.glow::before,
+.glow::after {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(
+        -45deg,
+        hsl(134, 100%, 50%),
+        #ffe600,
+        #ffe600,
+        #ff0019,
+        #f9bb02
+    );
+    background-size: 400%;
+    border-radius: 24px;
+    height: calc(100% + 5px);
+    width: calc(100% + 5px);
+    z-index: -1;
+    animation: change 10s linear infinite;
+}
+
+.glow::after {
+    filter: blur(40px);
+    opacity: 0.5;
+    
+}
+
+@keyframes change {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+
+/* Styles for the up and down triangles */
+.triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+}
+
+.up {
+    border-width: 0 150px 200px 150px;
+    border-color: transparent transparent #009700ae transparent; /* Green color */
+    top: 15%;
+    left: 10%;
+    transform: translate(-50%, 0);
+}
+
+.down {
+    border-width: 200px 150px 0 150px;
+    border-color: #ef0000 transparent transparent transparent; /* Red color */
+    top: 85%;
+    left: 90%;
+    transform: translate(-50%, 0);
+}
+
+.triangle:hover {
+    opacity: 0.7; /* Add hover effect - adjust opacity as needed */
+}
+
+.questions{
+    color:white;
+    font-size:65px;
+}
+
+h1{
+
+    color:white;
+    font-size:100px;
+    text-align: center; /* Center the heading */
+}
+
+.questions .p5{
+    position:relative;
+    left:64%;
+    bottom:-250px;
+
+}
+.questions .p2{
+    position:relative;
+    left:64%;
+    bottom:-300px;
+   
+}
+.questions .p3{
+    position:relative;
+    left:64%;
+    bottom:-300px;
+   
+}
+.questions .p4{
+    position:relative;
+    left:64%;
+    bottom:-300px;
+   
+}
+
+.long h1{
+    position:relative;
+    color:green;
+    top:530px;
+    left:-1830px;
+}
+.short h1{
+    position:relative;
+    color:red;
+    top:1500px;
+    left:1850px;
+}
+
+#canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    z-index: -1; /* Ensure the canvas stays behind other elements */
+}
+
+
